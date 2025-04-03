@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Sound2Scene synthesizes images of natural scene from the input sound.">
+  <meta name="keywords" content="Sound2Scene, Cross-modal generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Dubbing synchronized with Text and Target Video</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+<!--  <link rel="icon" href="./static/images/favicon.svg">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+<!--  <div class="navbar-menu">-->
+<!--    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">-->
+<!--      <a class="navbar-item" href="https://keunhong.com">-->
+<!--      <span class="icon">-->
+<!--          <i class="fas fa-home"></i>-->
+<!--      </span>-->
+<!--      </a>-->
+<!--    </div>-->
+
+<!--  </div>-->
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Video Dubbing synchronized with <br> Target Text and Video</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sites.google.com/view/kimsungbin/">Kim Sung-Bin</a>,</span>
+              <span class="author-block">
+              <a href="https://choijeongsoo.github.io/">Jeongsoo Choi</a>,</span>
+              <span class="author-block">
+              <a href="https://jasonppy.github.io/">Puyuan Peng</a>,</span>
+              <span class="author-block">
+              <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a></span>
+          </div>
+
+<!--          <div class="is-size-5 publication-authors">-->
+<!--            <span class="author-block"><sup>1</sup>POSTECH,&nbsp</span>-->
+<!--            <span class="author-block"><sup>2</sup>KAIST,&nbsp</span>-->
+<!--            <span class="author-block"><sup>3</sup>University of Michigan</span>-->
+<!--          </div>-->
+
+<!--          <div class="column has-text-centered">-->
+<!--            <div class="publication-links">-->
+<!--              &lt;!&ndash; PDF Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                                <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Sung-Bin_Sound_to_Visual_Scene_Generation_by_Audio-to-Visual_Latent_Alignment_CVPR_2023_paper.html"-->
+<!--                class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                  </span>-->
+<!--                  <span>Paper</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/abs/2303.17490" class="external-link button is-normal is-rounded is-dark">-->
+<!--&lt;!&ndash;                <a class="external-link button is-normal is-rounded is-dark">&ndash;&gt;-->
+<!--                  <span class="icon">-->
+<!--                      <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Video Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://youtu.be/XETgkM22n6s"-->
+<!--                class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-youtube"></i>-->
+<!--                  </span>-->
+<!--                  <span>Video</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Code Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--&lt;!&ndash;                <a href="https://github.com/google/nerfies"&ndash;&gt;-->
+<!--&lt;!&ndash;                   class="external-link button is-normal is-rounded is-dark">&ndash;&gt;-->
+<!--                <a href="https://github.com/postech-ami/Sound2Scene"-->
+<!--                class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                  </span>-->
+<!--                  <span>Code</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+              <!-- Dataset Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://github.com/google/nerfies/releases/tag/0.1"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="far fa-images"></i>-->
+<!--                  </span>-->
+<!--                  <span>Data</span>-->
+<!--                  </a>-->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle has-text-centered">
+        The goal of our video dubbing model is to synthesize speech from target text that aligns with the target video, using the voice from the source speech.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!--<section class="hero is-light is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-steve">-->
+<!--          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/steve.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-chair-tp">-->
+<!--          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/chair-tp.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-shiba">-->
+<!--          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/shiba.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-fullbody">-->
+<!--          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/fullbody.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-blueshirt">-->
+<!--          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/blueshirt.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-mask">-->
+<!--          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/mask.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-coffee">-->
+<!--          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/coffee.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-toby">-->
+<!--          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/toby2.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+
+<!--    <div class="embed-container">-->
+<!--    <iframe width="640" height="390"-->
+<!--    src="https://www.youtube.com/embed/XETgkM22n6s"-->
+<!--    frameborder="0" allowfullscreen></iframe>-->
+<!--</div>-->
+<!--<style>-->
+<!--.embed-container {-->
+<!--  position: relative;-->
+<!--  padding-bottom: 56.25%;-->
+<!--  height: 0;-->
+<!--  overflow: hidden;-->
+<!--  max-width: 100%;-->
+<!--}-->
+<!--.embed-container iframe,-->
+<!--.embed-container object,-->
+<!--.embed-container embed {-->
+<!--  position: absolute;-->
+<!--  top: 0;-->
+<!--  left: 0;-->
+<!--  width: 100%;-->
+<!--  height: 100%;-->
+<!--}-->
+<!--</style>-->
+<!--</section>-->
+
+
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Abstract</h2>-->
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            How does audio describe the world around us? In this paper, we explore the task of generating an image of the visual-->
+<!--            scenery that sound comes from. However, this task has inherent challenges, such as a significant modality gap between-->
+<!--            audio and visual signals, and audio lacks explicit visual information inside.-->
+<!--            We propose <span class="dnerf">Sound2Scene</span>, a model that works by scheduling the learning procedure of each model component to associate audio-visual modalities despite their information gaps.-->
+<!--            The key idea is to enrich the audio features with visual information by learning to align audio to visual latent space.-->
+<!--            Thereby, we translate input audio to visual feature, followed by a powerful pre-trained generator to generate an image.-->
+<!--            We further incorporate a highly correlated audio-visual pair selection method to stabilize the training. As a result, our method demonstrates substantially better quality in a large-->
+<!--            number of categories on VEGAS and VGGSound datasets, compared to the prior arts of sound-to-image generation.-->
+<!--            Besides, we show the spontaneously learned output controllability of our method by applying simple manipulations on the input in the waveform space or latent space.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;/ Abstract. &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--    &lt;!&ndash; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Need to add an presentation video this part!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! &ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="columns is-centered has-text-centered">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="column is-four-fifths">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2 class="title is-3">Video</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="publication-video">&ndash;&gt;-->
+<!--&lt;!&ndash;          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"&ndash;&gt;-->
+<!--&lt;!&ndash;                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;/ Paper video. &ndash;&gt;-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-full-width">-->
+<!--        <h2 class="title is-3">Method</h2>-->
+<!--        <div class="column is-full-width">-->
+<!--        <img src="./static/images/method.png"-->
+<!--                 class="interpolation-image"-->
+<!--                 alt="Interpolate start reference image."/><br><br>-->
+<!--        <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--          <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            We propose <span class="dnerf">Sound2Scene</span> and its training procedure for generating images from the input sound.-->
+<!--            First, given an image encoder pre-trained in a self-supervised way, we train a conditional generative adversarial-->
+<!--            network to generate images from visual embedding vectors of the image encoder.-->
+<!--            We then train an audio encoder to translate an input sound to its corresponding visual embedding vector,-->
+<!--            by aligning the audio to the visual space.-->
+<!--            Afterwards, we can generate diverse images from sound by-->
+<!--            translating from audio to visual embeddings and synthesizing an image.-->
+<!--            Since <span class="dnerf">Sound2Scene</span> must be capable of learning from challenging in-the-wild videos, we use sound source-->
+<!--            localization to select moments in time that have strong cross-modal associations.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<style>
+    table {
+        width: 100%; /* Set the table width */
+        margin-left: auto;
+        margin-right: auto;
+        table-layout: fixed; /* This helps in evenly distributing column widths */
+    }
+    td {
+        text-align: center; /* Center-aligns the content horizontally */
+        vertical-align: middle; /* Center-aligns the content vertically */
+        padding: 5px; /* Adds some padding inside each cell for better spacing */
+    }
+    video {
+        width: 150px; /* Fixed width for all videos */
+        height: auto; /* Maintains the aspect ratio */
+    }
+</style>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison with baseline model</h2>
+
+        <!-- Single Waveform. -->
+        <div class="content has-text-justified">
+
+
+          <p style="font-size: 16px;">
+            Our model successfully synthesizes speech synchronized with the target video, while the baseline model struggles to do so.
+          </p>
+        </div>
+        <table style="margin-left:auto; margin-right:auto;">
+    <tr>
+        <td>
+            <p><strong>Text Input</strong></p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">SO WHEN YOU'RE BORN YOU CAN MAKE FEELINGS LIKE CALMNESS AND</p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">SHE HAD TO IMPERSONATE A MAN</p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">AND THAT'S EVEN IF YOU'RE WORKING WAY MORE THAN FULL TIME HOURS</p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">HOW CAN WE GET SO MUCH INFORMATION OUT OF SO LITTLE MOTION</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Baseline Model</strong></p>
+        </td>
+        <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/0gks6ceq4eQ_00008_00015/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/1bnzVjOJ6NM_00023_00004/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/n3kNlFMXslo_00011_00012/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/npNYP2vzaPo_00002_00001/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Ours</strong></p>
+        </td>
+                <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/0gks6ceq4eQ_00008_00015/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/1bnzVjOJ6NM_00023_00004/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/n3kNlFMXslo_00011_00012/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/npNYP2vzaPo_00002_00001/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+</table>
+
+        <br/>
+        <!-- Single Waveform. -->
+<table style="margin-left:auto; margin-right:auto;">
+    <tr>
+        <td>
+            <p><strong>Text Input</strong></p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">WHY DOES A JELLYFISH EMIT LIGHT</p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">WE CAN CREATE A GLOBAL PARLIAMENT OF MAYORS</p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">BUT IF THEY DON'T STAY IN PARIS THE INTERNATIONAL PRESSURE WILL BE OVERWHELMING</p>
+        </td>
+        <td>
+            <p style="font-size: 12px;">AND WHEN I LOOK AT THE CRIMINAL JUSTICE SYSTEM IN THE UNITED STATES TODAY I FEEL THE EXACT SAME WAY THAT I DID ABOUT THE STATE OF</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Baseline Model</strong></p>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/eVFYhbHpfqU_00003_00002/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/PSlBlZ3hqKc_00005_00012/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/ta2Wvy9FSgA_00001_00003/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/ZJNESMhIxQ0_00016_00024/cross.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Ours</strong></p>
+        </td>
+
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/eVFYhbHpfqU_00003_00002/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/PSlBlZ3hqKc_00005_00012/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/ta2Wvy9FSgA_00001_00003/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/comparison/ZJNESMhIxQ0_00016_00024/ours.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+</table>
+
+        <br/>
+
+ <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Synthesizing speech with different speaker</h2>
+
+        <!-- Single Waveform. -->
+        <div class="content has-text-justified">
+
+
+          <p style="font-size: 16px;">
+            Our model can synthesize speech from the same target text and video using different speakers' voices.
+          </p>
+        </div>
+        <table style="margin-left:auto; margin-right:auto;">
+    <tr>
+        <td>
+            <p><strong>Text Input</strong></p>
+        </td>
+        <td colspan="4">
+            <p style="font-size: 12px;">BUT THOSE SURVEILLANCE FEATURES COME AT A COST</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Source Speech</strong></p>
+        </td>
+        <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_original.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_F3OhcpKSUBc.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_GSf6nijSSdA.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_hiIcwt88o94.wav" type="audio/wav">
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Synthesized Speech</strong></p>
+        </td>
+                <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_original.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_F3OhcpKSUBc.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_GSf6nijSSdA.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_hiIcwt88o94.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+</table>
+
+        <table style="margin-left:auto; margin-right:auto;">
+    <tr>
+        <td>
+            <p><strong>Text Input</strong></p>
+        </td>
+        <td colspan="4">
+            <p style="font-size: 12px;">MY PARENTS CAME FROM GERMANY</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Source Speech</strong></p>
+        </td>
+        <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_original.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_6wNif5SlN08.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_eVFYhbHpfqU.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_Sew0bn8mGAA.wav" type="audio/wav">
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Synthesized Speech</strong></p>
+        </td>
+                <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_original.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_6wNif5SlN08.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_eVFYhbHpfqU.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_Sew0bn8mGAA.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+</table>
+
+        <table style="margin-left:auto; margin-right:auto;">
+    <tr>
+        <td>
+            <p><strong>Text Input</strong></p>
+        </td>
+        <td colspan="4">
+            <p style="font-size: 12px;">I WAS LOOKING FOR THIS THING THAT ONLY FOOLS SEEM TO LOOK FOR</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Source Speech</strong></p>
+        </td>
+        <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_original.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_hiIcwt88o94.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_IWdzrZdRa38.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_x95nwilkaio.wav" type="audio/wav">
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Synthesized Speech</strong></p>
+        </td>
+                <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_original.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_hiIcwt88o94.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_IWdzrZdRa38.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_x95nwilkaio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+</table>
+
+        <table style="margin-left:auto; margin-right:auto;">
+    <tr>
+        <td>
+            <p><strong>Text Input</strong></p>
+        </td>
+        <td colspan="4">
+            <p style="font-size: 12px;">IT TURNED OUT THAT WE WERE DOING A LOT OF LOW LEVEL DRUG CASES ON THE STREETS JUST AROUND THE CORNER FROM OUR OFFICE IN TRENTON</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Source Speech</strong></p>
+        </td>
+        <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_original.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_akiQuyhXR8o.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_ClfBxWPkBKU.wav" type="audio/wav">
+            </audio>
+        </td>
+      <td>
+            <audio controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_s0YjL9rZyR0.wav" type="audio/wav">
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><strong>Synthesized Speech</strong></p>
+        </td>
+                <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_original.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_akiQuyhXR8o.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_ClfBxWPkBKU.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+      <td>
+            <video controls style="width: 150px">
+                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_s0YjL9rZyR0.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+</table>
+
+        <br/>
+        <!-- Single Waveform. -->
+
+    </div>
+    <!--/ Animation. -->
+
+</section>
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@inproceeding{sung2023sound,-->
+<!--  author    = {Sung-Bin, Kim and Senocak, Arda and Ha, Hyunwoo and Owens, Andrew and Oh, Tae-Hyun},-->
+<!--  title     = {Sound to Visual Scene Generation by Audio-to-Visual Latent Alignment},-->
+<!--  booktitle   = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},-->
+<!--  year      = {2023}-->
+<!--}</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<section class="section" id="Acknowledgment">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">Acknowledgment</h2>-->
+<!--    <p>-->
+<!--      This work was supported by IITP grant funded by Korea government (MSIT) (No.2021-0-02068, Artificial Intelligence Innovation Hub; No.2022-0-00124, Development of Artificial Intelligence Technology for Self-Improving Competency-Aware Learning Capabilities). The GPU resource was supported by the HPC Support Project, MSIT and NIPA.-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<footer class="footer">-->
+<!--  <div class="container">-->
+<!--    <div class="content has-text-centered">-->
+<!--      <a class="icon-link"-->
+<!--         href="./static/videos/nerfies_paper.pdf">-->
+<!--        <i class="fas fa-file-pdf"></i>-->
+<!--      </a>-->
+<!--&lt;!&ndash;      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>&ndash;&gt;-->
+<!--            <a class="icon-link" class="external-link" disabled>-->
+<!--        <i class="fab fa-github"></i>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-8">-->
+<!--        <div class="content">-->
+<!--          <p>-->
+<!--            This website is licensed under a <a rel="license"-->
+<!--                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative-->
+<!--            Commons Attribution-ShareAlike 4.0 International License</a>.-->
+<!--            <br>-->
+<!--              Source code mainly borrowed from <a-->
+<!--              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> website.-->
+<!--          </p>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
+
+</body>
+</html>
