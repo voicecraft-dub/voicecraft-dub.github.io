@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Sound2Scene synthesizes images of natural scene from the input sound.">
+        content="VoiceCraft-Dub synthesizes speech based on text and video.">
   <meta name="keywords" content="Sound2Scene, Cross-modal generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Video Dubbing synchronized with Text and Target Video</title>
+  <title>VoiceCraft-Dub: Automated Video Dubbing with Neural Codec Language Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -68,29 +68,31 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Video Dubbing synchronized with <br> Target Text and Video</h1>
+          <h1 class="title is-1 publication-title">VoiceCraft-Dub: Automated Video Dubbing <br> with Neural Codec Language Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://sites.google.com/view/kimsungbin/">Kim Sung-Bin</a>,</span>
+              <a href="https://sites.google.com/view/kimsungbin/">Kim Sung-Bin</a><sup>1</sup>,</span>
               <span class="author-block">
-              <a href="https://choijeongsoo.github.io/">Jeongsoo Choi</a>,</span>
+              <a href="https://choijeongsoo.github.io/">Jeongsoo Choi</a><sup>2</sup>,</span>
               <span class="author-block">
-              <a href="https://jasonppy.github.io/">Puyuan Peng</a>,</span>
+              <a href="https://jasonppy.github.io/">Puyuan Peng</a><sup>3</sup>,</span>
               <span class="author-block">
-              <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>,</span>
+              <a href="https://mm.kaist.ac.kr/joon/">Joon Son Chung</a><sup>2</sup>,</span>
+              <span class="author-block">
+              <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a></span>
+              <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a><sup>3</sup></span>
           </div>
 
-<!--          <div class="is-size-5 publication-authors">-->
-<!--            <span class="author-block"><sup>1</sup>POSTECH,&nbsp</span>-->
-<!--            <span class="author-block"><sup>2</sup>KAIST,&nbsp</span>-->
-<!--            <span class="author-block"><sup>3</sup>University of Michigan</span>-->
-<!--          </div>-->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>POSTECH,&nbsp</span>
+            <span class="author-block"><sup>2</sup>KAIST,&nbsp</span>
+            <span class="author-block"><sup>3</sup>University of Texas at Austin</span>
+          </div>
 
-<!--          <div class="column has-text-centered">-->
-<!--            <div class="publication-links">-->
-<!--              &lt;!&ndash; PDF Link. &ndash;&gt;-->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
 <!--              <span class="link-block">-->
 <!--                                <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Sung-Bin_Sound_to_Visual_Scene_Generation_by_Audio-to-Visual_Latent_Alignment_CVPR_2023_paper.html"-->
 <!--                class="external-link button is-normal is-rounded is-dark">-->
@@ -100,16 +102,16 @@
 <!--                  <span>Paper</span>-->
 <!--                </a>-->
 <!--              </span>-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://arxiv.org/abs/2303.17490" class="external-link button is-normal is-rounded is-dark">-->
-<!--&lt;!&ndash;                <a class="external-link button is-normal is-rounded is-dark">&ndash;&gt;-->
-<!--                  <span class="icon">-->
-<!--                      <i class="ai ai-arxiv"></i>-->
-<!--                  </span>-->
-<!--                  <span>arXiv</span>-->
-<!--                </a>-->
-<!--              </span>-->
-<!--              &lt;!&ndash; Video Link. &ndash;&gt;-->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.02386" class="external-link button is-normal is-rounded is-dark">
+<!--                <a class="external-link button is-normal is-rounded is-dark">-->
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
 <!--              <span class="link-block">-->
 <!--                <a href="https://youtu.be/XETgkM22n6s"-->
 <!--                class="external-link button is-normal is-rounded is-dark">-->
@@ -119,27 +121,27 @@
 <!--                  <span>Video</span>-->
 <!--                </a>-->
 <!--              </span>-->
-<!--              &lt;!&ndash; Code Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--&lt;!&ndash;                <a href="https://github.com/google/nerfies"&ndash;&gt;-->
-<!--&lt;!&ndash;                   class="external-link button is-normal is-rounded is-dark">&ndash;&gt;-->
-<!--                <a href="https://github.com/postech-ami/Sound2Scene"-->
-<!--                class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-github"></i>-->
-<!--                  </span>-->
-<!--                  <span>Code</span>-->
-<!--                  </a>-->
-<!--              </span>-->
-              <!-- Dataset Link. -->
-<!--              <span class="link-block">-->
-<!--                <a href="https://github.com/google/nerfies/releases/tag/0.1"-->
+              <!-- Code Link. -->
+              <span class="link-block">
+<!--                <a href="https://github.com/google/nerfies"-->
 <!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="far fa-images"></i>-->
-<!--                  </span>-->
-<!--                  <span>Data</span>-->
-<!--                  </a>-->
+                <a href="https://voicecraft-dub.github.io/"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://voicecraft-dub.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
             </div>
 
           </div>
@@ -151,173 +153,16 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaser.png"
+      <img src="./teaser.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
-      <h2 class="subtitle has-text-centered">
-        The goal of our video dubbing model is to synthesize speech from target text that aligns with the target video, using the voice from the source speech.
+      <h2 class="subtitle is-6 has-text-centered">
+        <b>Automated video dubbing.</b> (a) Unlike text-to-speech, which generates diverse speech based on target text, automated video dubbing requires synthesized speech to be temporally and expressively aligned with the video while maintaining naturalness and intelligibility. (b) Examples of synthesized speech from VoiceCraft-Dub show that each speech is aligned with the lip movements of the input video. We strongly encourage listening to each of the samples below.
       </h2>
     </div>
   </div>
 </section>
 
-
-<!--<section class="hero is-light is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-steve">-->
-<!--          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/steve.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-chair-tp">-->
-<!--          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/chair-tp.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-shiba">-->
-<!--          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/shiba.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-fullbody">-->
-<!--          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/fullbody.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-blueshirt">-->
-<!--          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/blueshirt.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-mask">-->
-<!--          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/mask.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-coffee">-->
-<!--          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/coffee.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-toby">-->
-<!--          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/toby2.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-
-<!--    <div class="embed-container">-->
-<!--    <iframe width="640" height="390"-->
-<!--    src="https://www.youtube.com/embed/XETgkM22n6s"-->
-<!--    frameborder="0" allowfullscreen></iframe>-->
-<!--</div>-->
-<!--<style>-->
-<!--.embed-container {-->
-<!--  position: relative;-->
-<!--  padding-bottom: 56.25%;-->
-<!--  height: 0;-->
-<!--  overflow: hidden;-->
-<!--  max-width: 100%;-->
-<!--}-->
-<!--.embed-container iframe,-->
-<!--.embed-container object,-->
-<!--.embed-container embed {-->
-<!--  position: absolute;-->
-<!--  top: 0;-->
-<!--  left: 0;-->
-<!--  width: 100%;-->
-<!--  height: 100%;-->
-<!--}-->
-<!--</style>-->
-<!--</section>-->
-
-
-
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Abstract</h2>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            How does audio describe the world around us? In this paper, we explore the task of generating an image of the visual-->
-<!--            scenery that sound comes from. However, this task has inherent challenges, such as a significant modality gap between-->
-<!--            audio and visual signals, and audio lacks explicit visual information inside.-->
-<!--            We propose <span class="dnerf">Sound2Scene</span>, a model that works by scheduling the learning procedure of each model component to associate audio-visual modalities despite their information gaps.-->
-<!--            The key idea is to enrich the audio features with visual information by learning to align audio to visual latent space.-->
-<!--            Thereby, we translate input audio to visual feature, followed by a powerful pre-trained generator to generate an image.-->
-<!--            We further incorporate a highly correlated audio-visual pair selection method to stabilize the training. As a result, our method demonstrates substantially better quality in a large-->
-<!--            number of categories on VEGAS and VGGSound datasets, compared to the prior arts of sound-to-image generation.-->
-<!--            Besides, we show the spontaneously learned output controllability of our method by applying simple manipulations on the input in the waveform space or latent space.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;/ Abstract. &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--    &lt;!&ndash; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Need to add an presentation video this part!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! &ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="columns is-centered has-text-centered">&ndash;&gt;-->
-<!--&lt;!&ndash;      <div class="column is-four-fifths">&ndash;&gt;-->
-<!--&lt;!&ndash;        <h2 class="title is-3">Video</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="publication-video">&ndash;&gt;-->
-<!--&lt;!&ndash;          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"&ndash;&gt;-->
-<!--&lt;!&ndash;                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;      </div>&ndash;&gt;-->
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--    &lt;!&ndash;/ Paper video. &ndash;&gt;-->
-<!--  </div>-->
-<!--</section>-->
-
-
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--        <div class="column is-full-width">-->
-<!--        <h2 class="title is-3">Method</h2>-->
-<!--        <div class="column is-full-width">-->
-<!--        <img src="./static/images/method.png"-->
-<!--                 class="interpolation-image"-->
-<!--                 alt="Interpolate start reference image."/><br><br>-->
-<!--        <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--          <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            We propose <span class="dnerf">Sound2Scene</span> and its training procedure for generating images from the input sound.-->
-<!--            First, given an image encoder pre-trained in a self-supervised way, we train a conditional generative adversarial-->
-<!--            network to generate images from visual embedding vectors of the image encoder.-->
-<!--            We then train an audio encoder to translate an input sound to its corresponding visual embedding vector,-->
-<!--            by aligning the audio to the visual space.-->
-<!--            Afterwards, we can generate diverse images from sound by-->
-<!--            translating from audio to visual embeddings and synthesizing an image.-->
-<!--            Since <span class="dnerf">Sound2Scene</span> must be capable of learning from challenging in-the-wild videos, we use sound source-->
-<!--            localization to select moments in time that have strong cross-modal associations.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 
 <style>
     table {
@@ -341,174 +186,499 @@
     <!-- Animation. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Comparison with baseline model</h2>
+        <h2 class="title is-3">Comparison results on our curated CelebV-Dub dataset</h2>
+        <div id="celeb-content" class="hidden">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Text input</th><th>Ground-Truth</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-        <!-- Single Waveform. -->
-        <div class="content has-text-justified">
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">it is finding your own voice where your own voice sits naturally and stably and healthily</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-_zyvfId578__8_0_13/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-_zyvfId578__8_0_13/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-_zyvfId578__8_0_13/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-_zyvfId578__8_0_13/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
 
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">squarespace makes it incredibly simple to create beautiful websites with their all in one platform</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-4GNkXEUOwY__6_0_2/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-4GNkXEUOwY__6_0_2/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-4GNkXEUOwY__6_0_2/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-4GNkXEUOwY__6_0_2/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
 
-          <p style="font-size: 16px;">
-            Our model successfully synthesizes speech synchronized with the target video, while the baseline model struggles to do so.
-          </p>
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">we do not need a european court</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-C77OR13vPU__25_0_3/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-C77OR13vPU__25_0_3/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-C77OR13vPU__25_0_3/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-C77OR13vPU__25_0_3/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">and any time i am passing it i stop and watch it too</p></td>
+                    <td><video controls>
+                            <source src="CELEB/0Z0N4N1cb5k__0_3/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0Z0N4N1cb5k__0_3/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0Z0N4N1cb5k__0_3/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0Z0N4N1cb5k__0_3/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">now before you add those in if you want to have a little bit of a thicker soup what you will do</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-8ya_8Co8Ss__4_0_0/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-8ya_8Co8Ss__4_0_0/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-8ya_8Co8Ss__4_0_0/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-8ya_8Co8Ss__4_0_0/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">if you saw my video about the custom christian clings with a salmon dial you might remember that we spoke about mark cho the co founder of the armory co owner of drakes</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-9SgTWyhQL4__0_0_0/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-9SgTWyhQL4__0_0_0/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-9SgTWyhQL4__0_0_0/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-9SgTWyhQL4__0_0_0/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">for more videos on rpgs though just</p></td>
+                    <td><video controls>
+                            <source src="CELEB/0Lg-76xJhws__10_0_1/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0Lg-76xJhws__10_0_1/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0Lg-76xJhws__10_0_1/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0Lg-76xJhws__10_0_1/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">he forgot me at the coffee shop when all i wanted to do was go and talk to him</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-2KGPYEFnsU__3_0/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-2KGPYEFnsU__3_0/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-2KGPYEFnsU__3_0/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-2KGPYEFnsU__3_0/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">and i am not sacrificing what</p></td>
+                    <td><video controls>
+                            <source src="CELEB/0qkVyahL10U__3_1/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0qkVyahL10U__3_1/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0qkVyahL10U__3_1/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0qkVyahL10U__3_1/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">low prices can also give you a chance to practice your skills on people who do not expect huge outcomes or results because they know they are getting a deal</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-8cZ4rlEdIU__2_1_2/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-8cZ4rlEdIU__2_1_2/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-8cZ4rlEdIU__2_1_2/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-8cZ4rlEdIU__2_1_2/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">this older sister that she looks up to and that she sees as so successful and beautiful</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-LJjxuHLI4U__66_0_0/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-LJjxuHLI4U__66_0_0/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-LJjxuHLI4U__66_0_0/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-LJjxuHLI4U__66_0_0/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">but you still have a chance to make things right because i am here</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-HWkUQJjVrI__8_0/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-HWkUQJjVrI__8_0/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-HWkUQJjVrI__8_0/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-HWkUQJjVrI__8_0/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">i know what is on the other side</p></td>
+                    <td><video controls>
+                            <source src="CELEB/0IEYKinDZyc__2_0_1/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0IEYKinDZyc__2_0_1/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0IEYKinDZyc__2_0_1/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/0IEYKinDZyc__2_0_1/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">good luck and see you soon</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-YNsl3kWSfc__9_0_3/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-YNsl3kWSfc__9_0_3/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-YNsl3kWSfc__9_0_3/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-YNsl3kWSfc__9_0_3/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">if they are just wanting to conserve space they will probably just go with their phone</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-OFtGUX-9Z0__5_0_5/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-OFtGUX-9Z0__5_0_5/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-OFtGUX-9Z0__5_0_5/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-OFtGUX-9Z0__5_0_5/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">and they have that festival every year and it is supposed to celebrate like children</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-J5F6VD1MN4__2_0_7/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-J5F6VD1MN4__2_0_7/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-J5F6VD1MN4__2_0_7/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-J5F6VD1MN4__2_0_7/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">also be sure to subscribe to the channel for more and hit that bell icon so you get notified</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-SquB8m_MVo__3_0_3/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-SquB8m_MVo__3_0_3/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-SquB8m_MVo__3_0_3/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-SquB8m_MVo__3_0_3/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">i thought we were in the clear</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-G3XuOnmrsQ__0_1/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-G3XuOnmrsQ__0_1/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-G3XuOnmrsQ__0_1/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-G3XuOnmrsQ__0_1/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">i did it because i was foolish</p></td>
+                    <td><video controls>
+                            <source src="CELEB/-3KCgSpt3hU__1_2/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-3KCgSpt3hU__1_2/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-3KCgSpt3hU__1_2/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/-3KCgSpt3hU__1_2/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">you want that alien broad take her</p></td>
+                    <td><video controls>
+                            <source src="CELEB/--aqjaJyZLk__0_2/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/--aqjaJyZLk__0_2/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/--aqjaJyZLk__0_2/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="CELEB/--aqjaJyZLk__0_2/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
         </div>
-        <table style="margin-left:auto; margin-right:auto;">
-    <tr>
-        <td>
-            <p><strong>Text Input</strong></p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">SO WHEN YOU'RE BORN YOU CAN MAKE FEELINGS LIKE CALMNESS AND</p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">SHE HAD TO IMPERSONATE A MAN</p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">AND THAT'S EVEN IF YOU'RE WORKING WAY MORE THAN FULL TIME HOURS</p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">HOW CAN WE GET SO MUCH INFORMATION OUT OF SO LITTLE MOTION</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Baseline Model</strong></p>
-        </td>
-        <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/0gks6ceq4eQ_00008_00015/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/1bnzVjOJ6NM_00023_00004/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/n3kNlFMXslo_00011_00012/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/npNYP2vzaPo_00002_00001/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Ours</strong></p>
-        </td>
-                <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/0gks6ceq4eQ_00008_00015/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/1bnzVjOJ6NM_00023_00004/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/n3kNlFMXslo_00011_00012/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/npNYP2vzaPo_00002_00001/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-</table>
-
-        <br/>
-        <!-- Single Waveform. -->
-<table style="margin-left:auto; margin-right:auto;">
-    <tr>
-        <td>
-            <p><strong>Text Input</strong></p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">WHY DOES A JELLYFISH EMIT LIGHT</p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">WE CAN CREATE A GLOBAL PARLIAMENT OF MAYORS</p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">BUT IF THEY DON'T STAY IN PARIS THE INTERNATIONAL PRESSURE WILL BE OVERWHELMING</p>
-        </td>
-        <td>
-            <p style="font-size: 12px;">AND WHEN I LOOK AT THE CRIMINAL JUSTICE SYSTEM IN THE UNITED STATES TODAY I FEEL THE EXACT SAME WAY THAT I DID ABOUT THE STATE OF</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Baseline Model</strong></p>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/eVFYhbHpfqU_00003_00002/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/PSlBlZ3hqKc_00005_00012/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/ta2Wvy9FSgA_00001_00003/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/ZJNESMhIxQ0_00016_00024/cross.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Ours</strong></p>
-        </td>
-
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/eVFYhbHpfqU_00003_00002/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/PSlBlZ3hqKc_00005_00012/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/ta2Wvy9FSgA_00001_00003/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/comparison/ZJNESMhIxQ0_00016_00024/ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-</table>
 
         <br/>
 
@@ -516,280 +686,1467 @@
     <!-- Animation. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Synthesizing speech with different speaker</h2>
+        <h2 class="title is-3">Comparison results on LRS3 dataset</h2>
+        <div id="lrs-content" class="hidden">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Text input</th><th>Ground-Truth</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-        <!-- Single Waveform. -->
-        <div class="content has-text-justified">
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">we had drawn a blank and it was not just iraq and afghanistan</p></td>
+                    <td><video controls>
+                            <source src="LRS/w1R4F9sSoow_00001/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/w1R4F9sSoow_00001/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/w1R4F9sSoow_00001/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/w1R4F9sSoow_00001/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
 
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">i mean how do they form</p></td>
+                    <td><video controls>
+                            <source src="LRS/2UStOghblfE_00002/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/2UStOghblfE_00002/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/2UStOghblfE_00002/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/2UStOghblfE_00002/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
 
-          <p style="font-size: 16px;">
-            Our model can synthesize speech from the same target text and video using different speakers' voices.
-          </p>
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">they do not represent what our views are</p></td>
+                    <td><video controls>
+                            <source src="LRS/3uSQlcGCHUU_00016/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/3uSQlcGCHUU_00016/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/3uSQlcGCHUU_00016/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/3uSQlcGCHUU_00016/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">we can do it 2 people together trying to improve trust</p></td>
+                    <td><video controls>
+                            <source src="LRS/1PNX6MSdVsk_00009/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/1PNX6MSdVsk_00009/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/1PNX6MSdVsk_00009/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/1PNX6MSdVsk_00009/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">they were unexpected pleasures</p></td>
+                    <td><video controls>
+                            <source src="LRS/rFpDK2KhAgw_00002/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/rFpDK2KhAgw_00002/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/rFpDK2KhAgw_00002/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/rFpDK2KhAgw_00002/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">but people did not relate to this</p></td>
+                    <td><video controls>
+                            <source src="LRS/SWvJxasiSZ8_00004/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SWvJxasiSZ8_00004/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SWvJxasiSZ8_00004/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SWvJxasiSZ8_00004/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">so we need a system that helps all our teachers be as good as the best</p></td>
+                    <td><video controls>
+                            <source src="LRS/81Ub0SMxZQo_00003/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/81Ub0SMxZQo_00003/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/81Ub0SMxZQo_00003/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/81Ub0SMxZQo_00003/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">after college i desperately needed to find a place to call home</p></td>
+                    <td><video controls>
+                            <source src="LRS/6wNif5SlN08_00010/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/6wNif5SlN08_00010/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/6wNif5SlN08_00010/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/6wNif5SlN08_00010/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">that is not simply critical to our economy</p></td>
+                    <td><video controls>
+                            <source src="LRS/ClfBxWPkBKU_00008/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/ClfBxWPkBKU_00008/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/ClfBxWPkBKU_00008/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/ClfBxWPkBKU_00008/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">as an inventor i try and turn fantasy into reality</p></td>
+                    <td><video controls>
+                            <source src="LRS/VxESitIllxE_00004/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/VxESitIllxE_00004/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/VxESitIllxE_00004/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/VxESitIllxE_00004/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">it took 6 days to deploy a global malware campaign</p></td>
+                    <td><video controls>
+                            <source src="LRS/SnSHsb5xKPo_00001/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SnSHsb5xKPo_00001/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SnSHsb5xKPo_00001/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SnSHsb5xKPo_00001/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">it turned out that we were doing a lot of low level drug cases on the streets just around the corner from our office in trenton</p></td>
+                    <td><video controls>
+                            <source src="LRS/ZJNESMhIxQ0_00001/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/ZJNESMhIxQ0_00001/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/ZJNESMhIxQ0_00001/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/ZJNESMhIxQ0_00001/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">i have looked at the best and i have looked at some of the worst</p></td>
+                    <td><video controls>
+                            <source src="LRS/SFnMTHhKdkw_00004/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SFnMTHhKdkw_00004/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SFnMTHhKdkw_00004/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SFnMTHhKdkw_00004/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">they are the basis of every action that you take</p></td>
+                    <td><video controls>
+                            <source src="LRS/0gks6ceq4eQ_00006/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/0gks6ceq4eQ_00006/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/0gks6ceq4eQ_00006/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/0gks6ceq4eQ_00006/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">imagine juggling a snowball across the tropics</p></td>
+                    <td><video controls>
+                            <source src="LRS/SSzRfSJTNW4_00007/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SSzRfSJTNW4_00007/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SSzRfSJTNW4_00007/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/SSzRfSJTNW4_00007/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">when you grow up poor you want to be rich</p></td>
+                    <td><video controls>
+                            <source src="LRS/sVtIuDKFO1c_00003/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/sVtIuDKFO1c_00003/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/sVtIuDKFO1c_00003/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/sVtIuDKFO1c_00003/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">has a coherent movement</p></td>
+                    <td><video controls>
+                            <source src="LRS/xukDIWFMU9Y_00003/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/xukDIWFMU9Y_00003/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/xukDIWFMU9Y_00003/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/xukDIWFMU9Y_00003/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">it would skip a beat</p></td>
+                    <td><video controls>
+                            <source src="LRS/XFnGhrCS3Gs_00005/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/XFnGhrCS3Gs_00005/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/XFnGhrCS3Gs_00005/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/XFnGhrCS3Gs_00005/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">the 2nd is you can put lots and lots of tests in a very small place</p></td>
+                    <td><video controls>
+                            <source src="LRS/Sew0bn8mGAA_00002/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/Sew0bn8mGAA_00002/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/Sew0bn8mGAA_00002/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/Sew0bn8mGAA_00002/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">and this idea is actually nothing new</p></td>
+                    <td><video controls>
+                            <source src="LRS/WFCvkkDSfIU_00003/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/WFCvkkDSfIU_00003/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/WFCvkkDSfIU_00003/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/WFCvkkDSfIU_00003/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">and it is hard and it takes courage but that is why we are alive right</p></td>
+                    <td><video controls>
+                            <source src="LRS/QKHkSUiQboA_00005/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/QKHkSUiQboA_00005/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/QKHkSUiQboA_00005/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/QKHkSUiQboA_00005/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">and he said on the spot absolutely yes</p></td>
+                    <td><video controls>
+                            <source src="LRS/0VJqrlH9cdI_00001/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/0VJqrlH9cdI_00001/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/0VJqrlH9cdI_00001/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/0VJqrlH9cdI_00001/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-cell"><p style="font-size: 15px;">sometimes it is messy and it is always unpredictable</p></td>
+                    <td><video controls>
+                            <source src="LRS/shG0ezBeeJc_00002/1_gt.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/shG0ezBeeJc_00002/2_ours.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/shG0ezBeeJc_00002/3_hpm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                    <td><video controls>
+                            <source src="LRS/shG0ezBeeJc_00002/4_style.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
         </div>
-        <table style="margin-left:auto; margin-right:auto;">
-    <tr>
-        <td>
-            <p><strong>Text Input</strong></p>
-        </td>
-        <td colspan="4">
-            <p style="font-size: 12px;">BUT THOSE SURVEILLANCE FEATURES COME AT A COST</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Source Speech</strong></p>
-        </td>
-        <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_original.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_F3OhcpKSUBc.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_GSf6nijSSdA.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/source_hiIcwt88o94.wav" type="audio/wav">
-            </audio>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Synthesized Speech</strong></p>
-        </td>
-                <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_original.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_F3OhcpKSUBc.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_GSf6nijSSdA.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ni4FV5zL6lM_00001_00003/gen_hiIcwt88o94.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-</table>
 
-        <table style="margin-left:auto; margin-right:auto;">
-    <tr>
-        <td>
-            <p><strong>Text Input</strong></p>
-        </td>
-        <td colspan="4">
-            <p style="font-size: 12px;">MY PARENTS CAME FROM GERMANY</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Source Speech</strong></p>
-        </td>
-        <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_original.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_6wNif5SlN08.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_eVFYhbHpfqU.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/source_Sew0bn8mGAA.wav" type="audio/wav">
-            </audio>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Synthesized Speech</strong></p>
-        </td>
-                <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_original.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_6wNif5SlN08.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_eVFYhbHpfqU.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/uJr4wGcLNsA_00010_00003/gen_Sew0bn8mGAA.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-</table>
+          <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison results on cross-speaker synthesis on the LRS3 dataset</h2><div id="cross-speaker-content" class="hidden">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Speaker sample & Text input</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-        <table style="margin-left:auto; margin-right:auto;">
-    <tr>
-        <td>
-            <p><strong>Text Input</strong></p>
-        </td>
-        <td colspan="4">
-            <p style="font-size: 12px;">I WAS LOOKING FOR THIS THING THAT ONLY FOOLS SEEM TO LOOK FOR</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Source Speech</strong></p>
-        </td>
-        <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_original.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_hiIcwt88o94.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_IWdzrZdRa38.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/source_x95nwilkaio.wav" type="audio/wav">
-            </audio>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Synthesized Speech</strong></p>
-        </td>
-                <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_original.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_hiIcwt88o94.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_IWdzrZdRa38.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/XESFPEFpHt4_00008_00010/gen_x95nwilkaio.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-</table>
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/ZnCSUBmeRxw/0_source_0.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>but just imagine for a moment what this must feel like</span> <!-- Add your text here -->
 
-        <table style="margin-left:auto; margin-right:auto;">
-    <tr>
-        <td>
-            <p><strong>Text Input</strong></p>
-        </td>
-        <td colspan="4">
-            <p style="font-size: 12px;">IT TURNED OUT THAT WE WERE DOING A LOT OF LOW LEVEL DRUG CASES ON THE STREETS JUST AROUND THE CORNER FROM OUR OFFICE IN TRENTON</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Source Speech</strong></p>
-        </td>
-        <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_original.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_akiQuyhXR8o.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_ClfBxWPkBKU.wav" type="audio/wav">
-            </audio>
-        </td>
-      <td>
-            <audio controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/source_s0YjL9rZyR0.wav" type="audio/wav">
-            </audio>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><strong>Synthesized Speech</strong></p>
-        </td>
-                <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_original.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_akiQuyhXR8o.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_ClfBxWPkBKU.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-      <td>
-            <video controls style="width: 150px">
-                <source src="./static/speaker/ZJNESMhIxQ0_00030_00001/gen_s0YjL9rZyR0.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </td>
-    </tr>
-</table>
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/1_ours_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/2_hpm_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/3_style_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
 
-        <br/>
-        <!-- Single Waveform. -->
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/ZnCSUBmeRxw/0_source_1.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>but just imagine for a moment what this must feel like</span> <!-- Add your text here -->
 
-    </div>
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/1_ours_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/2_hpm_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/3_style_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/ZnCSUBmeRxw/0_source_2.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>but just imagine for a moment what this must feel like</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/1_ours_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/2_hpm_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/3_style_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/ZnCSUBmeRxw/0_source_3.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>but just imagine for a moment what this must feel like</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/1_ours_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/2_hpm_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/ZnCSUBmeRxw/3_style_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Speaker sample & Text input</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/k2hQL9Zrokk/0_source_0.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>i believe a story there has to be told</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/1_ours_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/2_hpm_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/3_style_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/k2hQL9Zrokk/0_source_1.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>i believe a story there has to be told</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/1_ours_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/2_hpm_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/3_style_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/k2hQL9Zrokk/0_source_2.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>i believe a story there has to be told</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/1_ours_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/2_hpm_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/3_style_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/k2hQL9Zrokk/0_source_3.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>i believe a story there has to be told</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/1_ours_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/2_hpm_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/k2hQL9Zrokk/3_style_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Speaker sample & Text input</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/AsSd2nmoKNA/0_source_0.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>and i said to myself i wanna get me one of them</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/1_ours_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/2_hpm_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/3_style_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/AsSd2nmoKNA/0_source_1.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>and i said to myself i wanna get me one of them</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/1_ours_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/2_hpm_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/3_style_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/AsSd2nmoKNA/0_source_2.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>and i said to myself i wanna get me one of them</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/1_ours_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/2_hpm_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/3_style_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/AsSd2nmoKNA/0_source_3.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>and i said to myself i wanna get me one of them</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/1_ours_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/2_hpm_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/AsSd2nmoKNA/3_style_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Speaker sample & Text input</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/PSlBlZ3hqKc/0_source_0.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>that is the real world and unless we find a way to globalize democracy or</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/1_ours_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/2_hpm_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/3_style_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/PSlBlZ3hqKc/0_source_1.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>that is the real world and unless we find a way to globalize democracy or</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/1_ours_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/2_hpm_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/3_style_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/PSlBlZ3hqKc/0_source_2.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>that is the real world and unless we find a way to globalize democracy or</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/1_ours_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/2_hpm_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/3_style_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/PSlBlZ3hqKc/0_source_3.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>that is the real world and unless we find a way to globalize democracy or</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/1_ours_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/2_hpm_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/PSlBlZ3hqKc/3_style_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Speaker sample & Text input</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/4n8qT0vQbWk/0_source_0.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>we have to decide what it means</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/1_ours_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/2_hpm_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/3_style_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/4n8qT0vQbWk/0_source_1.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>we have to decide what it means</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/1_ours_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/2_hpm_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/3_style_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/4n8qT0vQbWk/0_source_2.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>we have to decide what it means</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/1_ours_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/2_hpm_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/3_style_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/4n8qT0vQbWk/0_source_3.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>we have to decide what it means</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/1_ours_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/2_hpm_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/4n8qT0vQbWk/3_style_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Speaker sample & Text input</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/j7fRIGphgtk/0_source_0.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>it would be a mall and not a park</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/1_ours_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/2_hpm_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/3_style_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/j7fRIGphgtk/0_source_1.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>it would be a mall and not a park</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/1_ours_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/2_hpm_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/3_style_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/j7fRIGphgtk/0_source_2.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>it would be a mall and not a park</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/1_ours_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/2_hpm_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/3_style_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/j7fRIGphgtk/0_source_3.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>it would be a mall and not a park</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/1_ours_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/2_hpm_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/j7fRIGphgtk/3_style_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Speaker sample & Text input</th><th>Ours</th><th>[HPMDubbing, CVPR23]</th><th>[StyleDubber, ACL24]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/8vNIrPeRGlM/0_source_0.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>so they won't go for a walk they won't hang out with their friends they won't eat</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/1_ours_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/2_hpm_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/3_style_0.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/8vNIrPeRGlM/0_source_1.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>so they won't go for a walk they won't hang out with their friends they won't eat</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/1_ours_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/2_hpm_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/3_style_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/8vNIrPeRGlM/0_source_2.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>so they won't go for a walk they won't hang out with their friends they won't eat</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/1_ours_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/2_hpm_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/3_style_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- For the audio file (wav), use the <audio> tag -->
+                        <td><audio controls style="width: 150px">
+                                <source src="Cross-speaker/8vNIrPeRGlM/0_source_3.wav" type="audio/wav">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <br>  <!-- Line break for separating audio player and text -->
+                            <span>so they won't go for a walk they won't hang out with their friends they won't eat</span> <!-- Add your text here -->
+
+                        </td>
+                        <!-- For the video files (mp4), use the <video> tag -->
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/1_ours_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/2_hpm_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                        <td><video controls>
+                                <source src="Cross-speaker/8vNIrPeRGlM/3_style_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+        </div>
     <!--/ Animation. -->
 
 </section>
